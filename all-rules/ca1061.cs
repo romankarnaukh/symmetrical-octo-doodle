@@ -32,7 +32,7 @@ namespace ca1061
 
     class Test
     {
-        static void Main1061()
+        static void master1061()
         {
             DerivedType derived = new DerivedType();
 

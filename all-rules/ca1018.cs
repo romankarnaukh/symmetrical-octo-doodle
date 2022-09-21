@@ -3,9 +3,9 @@
 namespace ca1018
 {
     // Violates rule: MarkAttributesWithAttributeUsage.
-    public sealed class BadCodeMaintainerAttribute : Attribute
+    public sealed class BadCodemastertainerAttribute : Attribute
     {
-        public BadCodeMaintainerAttribute(string developerName)
+        public BadCodemastertainerAttribute(string developerName)
         {
             DeveloperName = developerName;
         }
@@ -15,9 +15,9 @@ namespace ca1018
     // Satisfies rule: Attributes specify AttributeUsage.
     // This attribute is valid for type-level targets.
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Enum | AttributeTargets.Interface | AttributeTargets.Delegate)]
-    public sealed class GoodCodeMaintainerAttribute : Attribute
+    public sealed class GoodCodemastertainerAttribute : Attribute
     {
-        public GoodCodeMaintainerAttribute(string developerName)
+        public GoodCodemastertainerAttribute(string developerName)
         {
             DeveloperName = developerName;
         }

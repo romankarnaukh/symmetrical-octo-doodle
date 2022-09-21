@@ -206,7 +206,7 @@ namespace ca1021
     //<snippet4>
     public class Test
     {
-        public static void MainTest()
+        public static void masterTest()
         {
             string s1 = "12345";
             string s2 = "12345";

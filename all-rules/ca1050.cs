@@ -26,9 +26,9 @@ namespace ca1050
 namespace ca1050
 {
     //<snippet2>
-    public class MainHolder
+    public class masterHolder
     {
-        public static void Main1050()
+        public static void master1050()
         {
             Test t1 = new Test();
             Console.WriteLine(t1.ToString());

@@ -46,7 +46,7 @@ namespace ca2100
 
     class MaliciousCode
     {
-        static void Main2100(string[] args)
+        static void master2100(string[] args)
         {
             SqlQueries queries = new SqlQueries();
             queries.UnsafeQuery(args[0], "' OR 1=1 --", "[PLACEHOLDER]");

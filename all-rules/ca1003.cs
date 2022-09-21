@@ -41,7 +41,7 @@ namespace ca1003
 
     class Test
     {
-        static void MainEvent()
+        static void masterEvent()
         {
             var eventRaiser = new ClassThatRaisesEvent();
             var eventHandler = new ClassThatHandlesEvent(eventRaiser);
@@ -90,7 +90,7 @@ namespace ca1003_fix
 
     class Test
     {
-        static void MainEvent()
+        static void masterEvent()
         {
             var eventRaiser = new ClassThatRaisesEvent();
             var eventHandler = new ClassThatHandlesEvent(eventRaiser);

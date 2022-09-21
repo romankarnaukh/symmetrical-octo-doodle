@@ -35,7 +35,7 @@ namespace ca2214
 
     public class TestBadlyConstructedType
     {
-        public static void Main2214()
+        public static void master2214()
         {
             DerivedType derivedInstance = new DerivedType();
         }

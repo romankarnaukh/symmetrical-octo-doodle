@@ -32,7 +32,7 @@ namespace ca1008
 
     class UseBadTraceOptions
     {
-        static void MainTrace()
+        static void masterTrace()
         {
             // Set the flags.
             BadTraceOptions badOptions =

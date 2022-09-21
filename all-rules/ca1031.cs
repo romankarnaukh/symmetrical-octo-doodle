@@ -51,7 +51,7 @@ namespace ca1031
             };
 
             // For functionally equivalent code, also catch 
-            // remaining exceptions that may be thrown by File.Open
+            // remastering exceptions that may be thrown by File.Open
 
             try
             {

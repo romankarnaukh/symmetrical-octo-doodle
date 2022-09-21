@@ -23,7 +23,7 @@ namespace ca2227
 
     class ReplaceWritableCollection
     {
-        static void Main2227()
+        static void master2227()
         {
             ArrayList newCollection = new ArrayList(new string[] { "a", "new", "collection" });
 
