@@ -5,7 +5,7 @@ namespace ca2200
     //<snippet1>
     class TestsRethrow
     {
-        static void Main2200()
+        static void master2200()
         {
             TestsRethrow testRethrow = new TestsRethrow();
             testRethrow.CatchException();

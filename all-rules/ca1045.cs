@@ -162,7 +162,7 @@ namespace ca1045
             }
         }
 
-        public static void Main1045()
+        public static void master1045()
         {
             UseTheComplicatedClass();
 
@@ -208,7 +208,7 @@ namespace ca1045
     //<snippet4>
     public class Test
     {
-        public static void Main1045()
+        public static void master1045()
         {
             string s1 = "12345";
             string s2 = "12345";

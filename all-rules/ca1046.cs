@@ -22,7 +22,7 @@ namespace ca1046
     //<snippet2>
     public class ReferenceTypeEquality
     {
-        public static void Main1046()
+        public static void master1046()
         {
             MyReferenceType a = new MyReferenceType(2, 2);
             MyReferenceType b = new MyReferenceType(2, 2);

@@ -2,9 +2,9 @@ name: dotnet/code-analysis
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
   
 jobs:
   check_consoleApp:
@@ -17,7 +17,7 @@ jobs:
       run: dotnet restore ./ConsoleApp1/ConsoleApp1.sln
 
     - name: Run .NET Code Analysis
-      uses: dotnet/code-analysis@main
+      uses: dotnet/code-analysis@master
       id: code-analysis
       with:
         solution: ./ConsoleApp1/ConsoleApp1.sln
@@ -44,7 +44,7 @@ jobs:
       run: dotnet restore ./all-rules/all-rules.sln
 
     - name: Run .NET Code Analysis
-      uses: dotnet/code-analysis@main
+      uses: dotnet/code-analysis@master
       id: code-analysis
       with:
         solution: ./all-rules/all-rules.sln

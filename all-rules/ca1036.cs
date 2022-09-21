@@ -119,7 +119,7 @@ namespace ca1036
     //<snippet2>
     public class Test
     {
-        public static void Main1036(string[] args)
+        public static void master1036(string[] args)
         {
             if (args.Length < 2)
             {

@@ -6,7 +6,7 @@ namespace ConsoleApp1
 {
     class Program
     {
-        static void Main(string[] args)
+        static void master(string[] args)
         {
             Console.WriteLine("Hello World!");
             var input = 0;

@@ -29,7 +29,7 @@ namespace ca1304
     //<snippet2>
     public class IFormatProviderTest
     {
-        public static void Main1304()
+        public static void master1304()
         {
             string dt = "6/4/1900 12:15:12";
 

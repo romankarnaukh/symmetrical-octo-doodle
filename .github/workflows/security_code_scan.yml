@@ -2,11 +2,11 @@ name: Security Code Scan
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
+  # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
     
 jobs:
   SCS:
@@ -17,7 +17,7 @@ jobs:
       - uses: microsoft/setup-msbuild@v1.0.2
       
       - name: Set up projects
-        uses: security-code-scan/security-code-scan-add-action@main
+        uses: security-code-scan/security-code-scan-add-action@master
 
       - name: Build
         run: |
@@ -25,7 +25,7 @@ jobs:
           msbuild
         
       - name: Convert sarif for uploading to GitHub
-        uses: security-code-scan/security-code-scan-results-action@main
+        uses: security-code-scan/security-code-scan-results-action@master
         
       - name: Upload sarif	
         uses: github/codeql-action/upload-sarif@v1
