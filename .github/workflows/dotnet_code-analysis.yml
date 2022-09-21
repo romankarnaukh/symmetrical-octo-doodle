@@ -1,0 +1,62 @@
+name: dotnet/code-analysis
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  
+jobs:
+  check_consoleApp:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run NuGet restore
+      run: dotnet restore ./ConsoleApp1/ConsoleApp1.sln
+
+    - name: Run .NET Code Analysis
+      uses: dotnet/code-analysis@main
+      id: code-analysis
+      with:
+        solution: ./ConsoleApp1/ConsoleApp1.sln
+        build-breaking: false
+        all-categories: all
+        
+    - uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: ${{ steps.code-analysis.outputs.sarifFile }} 
+      
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: dotnet_ConsoleApp_results.sarif
+        path: ${{ steps.code-analysis.outputs.sarifFile }} 
+
+  check_allRules:
+    runs-on: windows-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run NuGet restore
+      run: dotnet restore ./all-rules/all-rules.sln
+
+    - name: Run .NET Code Analysis
+      uses: dotnet/code-analysis@main
+      id: code-analysis
+      with:
+        solution: ./all-rules/all-rules.sln
+        build-breaking: false
+        all-categories: all
+        
+    - uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: ${{ steps.code-analysis.outputs.sarifFile }} 
+
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2.2.4
+      with:
+        name: dotnet_allRules_results.sarif
+        path: ${{ steps.code-analysis.outputs.sarifFile }} 
